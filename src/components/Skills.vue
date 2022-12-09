@@ -50,14 +50,4 @@
 h2 {
   @include font-l;
 }
-
-.skills__rings {
-  position: absolute;
-  right: -250px;
-  top: 1050px;
-  @media only screen and (max-width: $mobile) {
-    right: -350px;
-    top: 1450px;
-  }
-}
 </style>
