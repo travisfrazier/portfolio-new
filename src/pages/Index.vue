@@ -22,7 +22,7 @@ import Rings from '../components/Rings.vue';
 
 export default {
   metaInfo: {
-    title: 'Hello, world!'
+    title: 'Travis Frazier'
   },
   components: {
     Header,
