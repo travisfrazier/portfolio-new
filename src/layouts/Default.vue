@@ -19,6 +19,9 @@ query {
     src: url('../assets/fonts/SpaceGrotesk-VariableFont_wght.ttf');
     font-weight: normal;
 }
+html {
+  overflow-x: hidden;
+}
 
 body {
   position: relative;

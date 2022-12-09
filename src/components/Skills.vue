@@ -28,11 +28,11 @@
 </template>
 
 <script>
-export default {};
 </script>
 
 <style lang="scss" scoped>
 .skills__section {
+  overflow-x: hidden;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding: 50px 0px 80px 0px;
@@ -49,5 +49,15 @@ export default {};
 
 h2 {
   @include font-l;
+}
+
+.skills__rings {
+  position: absolute;
+  right: -250px;
+  top: 1050px;
+  @media only screen and (max-width: $mobile) {
+    right: -350px;
+    top: 1450px;
+  }
 }
 </style>

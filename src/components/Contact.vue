@@ -10,9 +10,9 @@
           </p>
         </div>
         <form name="contact" netlify>
-          <input name="name" placeholder="NAME" />
-          <input name="email" placeholder="EMAIL" />
-          <textarea name="message" placeholder="MESSAGE" />
+          <input type="text" name="name" placeholder="NAME" />
+          <input type="email" name="email" placeholder="EMAIL" />
+          <textarea type="text" name="message" placeholder="MESSAGE" />
           <button type="submit">Send message</button>
         </form>
       </div>
