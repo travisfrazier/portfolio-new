@@ -45,7 +45,7 @@ export default {
   top: 1050px;
   @media only screen and (max-width: $mobile) {
     right: -350px;
-    top: 1550px;
+    top: 1450px;
   }
 }
 

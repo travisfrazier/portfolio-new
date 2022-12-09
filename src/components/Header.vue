@@ -109,7 +109,7 @@ header {
   }
 
   h1 {
-    width: 78%;
+    width: 75%;
     @include font-xl;
     margin-bottom: 34px;
     u {
@@ -125,8 +125,12 @@ header {
 
   p {
     margin-bottom: 70px;
+    width: 35%;
+    @media only screen and (max-width: $mobile) {
+      width: 100%;
+    }
   }
-  
+
 }
 
 .header__profile {
