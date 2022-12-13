@@ -65,6 +65,16 @@ export default {
           id: 2,
         },
         {
+          img: "typemaster.png",
+          name: "Typemaster Launch Landing Page",
+          skillOne: "HTML",
+          skillTwo: "CSS Grid",
+          skillThree: "Sass",
+          live: "https://travisfrazier.github.io/typemaster-lp",
+          code: "https://github.com/travisfrazier/typemaster-lp",
+          id: 3,
+        },
+        {
           img: "guess.png",
           name: "Match Game Web App",
           skillOne: "HTML",
@@ -72,7 +82,7 @@ export default {
           skillThree: "Javascript",
           live: "https://travisfrazier.github.io/matchgame",
           code: "https://github.com/travisfrazier/matchgame",
-          id: 3,
+          id: 4,
         },
         {
           img: "drum.png",
@@ -82,7 +92,7 @@ export default {
           skillThree: "Vue",
           live: "https://travisfrazier.github.io/vue-drum-pad",
           code: "https://github.com/travisfrazier/vue-drum-pad",
-          id: 4,
+          id: 5,
         },
         {
           img: "flash.png",
@@ -92,7 +102,7 @@ export default {
           skillThree: "Vue",
           live: "https://effortless-malabi-73eca3.netlify.app",
           code: "https://github.com/travisfrazier/flashcards-vue",
-          id: 5,
+          id: 6,
         },
         {
           img: "weather.png",
@@ -102,16 +112,6 @@ export default {
           skillThree: "Javascript",
           live: "https://codepen.io/travisfrazier/full/bKyzep",
           code: "https://codepen.io/travisfrazier/full/bKyzep",
-          id: 6,
-        },
-        {
-          img: "data-app.png",
-          name: "Data Intake Web App",
-          skillOne: "HTML",
-          skillTwo: "CSS",
-          skillThree: "Vue",
-          live: "https://data-intake-vue.netlify.app",
-          code: "https://github.com/travisfrazier/vue-app-wizard",
           id: 7,
         },
         {
