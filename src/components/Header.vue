@@ -67,9 +67,10 @@ export default {
     typeText() {      
 
     gsap.to('.cursor', {
-      opacity:0, 
+      opacity: 0, 
+      duration: .9,
       ease: "power2.inOut", 
-      repeat: -1
+      repeat: -1,
     })
 
      let tlMaster = gsap.timeline({
