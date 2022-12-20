@@ -46,13 +46,11 @@
     <div class="header__main">
       <div class="header__info">
         <h1>
-          Nice to meet you!
-          I'm <u>Travis Frazier</u>.
+          Nice to meet you! I'm <u class="animate__text"></u><span class="cursor">_</span>
         </h1>
         <p>
-          Based in San Diego, I’m a front-end developer
-          passionate about building responsive web apps
-          that users love.
+          Based in San Diego, I’m a front-end developer passionate about
+          building responsive web apps that users love.
         </p>
         <a href="#contact">
           <button>Contact Me</button>
@@ -64,7 +62,38 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    typeText() {      
+
+    gsap.to('.cursor', {
+      opacity:0, 
+      ease: "power2.inOut", 
+      repeat: -1
+    })
+
+     let tlMaster = gsap.timeline({
+      repeat: 0
+     })
+
+     let tlText = gsap.timeline({
+      repeat: 0,
+      yoyo: false
+     })
+
+     tlText.to('.animate__text', {
+      delay: 1.5,
+      duration: 2.5,
+      text: 'Travis Frazier'
+     })
+
+      tlMaster.add(tlText);
+    },
+  },
+  mounted() {
+    this.typeText();
+  }
+};
 </script>
 
 <style lang="scss" scoped>
@@ -100,12 +129,12 @@ header {
   padding-top: 120px;
 
   @media only screen and (max-width: $mobile) {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-      text-align: center;
-      align-items: center;
-      padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+    align-items: center;
+    padding-top: 40px;
   }
 
   h1 {
@@ -130,7 +159,6 @@ header {
       width: 100%;
     }
   }
-
 }
 
 .header__profile {
@@ -142,10 +170,10 @@ header {
   height: 720px;
   object-fit: cover;
   @media only screen and (max-width: $mobile) {
-      position: static;
-      width: 175px;
-      height: auto;
-      order: -1;
+    position: static;
+    width: 175px;
+    height: auto;
+    order: -1;
   }
 }
 </style>

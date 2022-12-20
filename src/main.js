@@ -17,4 +17,9 @@ export default function (Vue, { router, head, isClient }) {
     body: true
   })
 
+  head.script.push({
+    src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/TextPlugin.min.js',
+    body: true
+  })
+
 }
