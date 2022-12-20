@@ -12,211 +12,72 @@
 
 
 <script>
-import Header from '../components/Header.vue';
-import Skills from '../components/Skills.vue';
-import Projects from '../components/Projects.vue';
-import Contact from '../components/Contact.vue';
-import Rings from '../components/Rings.vue';
-
-
+import Header from "../components/Header.vue";
+import Skills from "../components/Skills.vue";
+import Projects from "../components/Projects.vue";
+import Contact from "../components/Contact.vue";
+import Rings from "../components/Rings.vue";
 
 export default {
   metaInfo: {
-    title: 'Travis Frazier'
+    title: "Travis Frazier",
   },
   components: {
     Header,
     Skills,
     Projects,
     Contact,
-    Rings
+    Rings,
   },
   methods: {
-    animateSkills() {
-      //One
-      gsap.set('.skills__rings .one', {
-        x: 100
-      })
-      gsap.to(".skills__rings .one", {
-        duration: 2,
-        x: 0,
-        repeat: 0,
-        yoyo: true,
-        scrollTrigger: '.skills__rings'
+    animateRings() {
+      //Header Rings
+      gsap.set(".header__rings .ring", {
+        x: -200,
       });
-
-      //Two
-      gsap.set('.skills__rings .two', {
-        x: 125
-      })
-      gsap.to(".skills__rings .two", {
+      gsap.to(".header__rings .ring", {
         duration: 2,
         x: 0,
         repeat: 0,
-        yoyo: true,
-        scrollTrigger: '.skills__rings'
+        stagger: {
+          amount: 0.75,
+          from: 0,
+        },
       });
-
-      //Three
-      gsap.set('.skills__rings .three', {
-        x: 150
-      })
-      gsap.to(".skills__rings .three", {
-        duration: 2,
-        x: 0,
-        repeat: 0,
-        yoyo: true,
-        scrollTrigger: '.skills__rings'
+      //Skills rings
+      gsap.set(".skills__rings .ring", {
+        x: 200,
       });
-
-      //Four
-      gsap.set('.skills__rings .four', {
-        x: 175
-      })
-      gsap.to(".skills__rings .four", {
+      gsap.to(".skills__rings .ring", {
         duration: 2,
         x: 0,
         repeat: 0,
-        yoyo: true,
-        scrollTrigger: '.skills__rings'
+        scrollTrigger: ".skills__rings",
+        stagger: {
+          amount: 0.75,
+          from: 0,
+        },
       });
-
-      //Five
-      gsap.set('.skills__rings .five', {
-        x: 200
-      })
-      gsap.to(".skills__rings .five", {
-        duration: 2,
-        x: 0,
-        repeat: 0,
-        yoyo: true,
-        scrollTrigger: '.skills__rings'
+      //Footer rings
+      gsap.set(".footer__rings .ring", {
+        x: -200,
       });
-    },
-    animateHeader() {
-      //One
-      gsap.set('.header__rings .one', {
-        x: -100
-      })
-      gsap.to(".header__rings .one", {
+      gsap.to(".footer__rings .ring", {
         duration: 2,
         x: 0,
         repeat: 0,
-        yoyo: true,
-      });
-
-      //Two
-      gsap.set('.header__rings .two', {
-        x: -125
-      })
-      gsap.to(".header__rings .two", {
-        duration: 2,
-        x: 0,
-        repeat: 0,
-        yoyo: true,
-      });
-
-      //Three
-      gsap.set('.header__rings .three', {
-        x: -150
-      })
-      gsap.to(".header__rings .three", {
-        duration: 2,
-        x: 0,
-        repeat: 0,
-        yoyo: true,
-      });
-
-      //Four
-      gsap.set('.header__rings .four', {
-        x: -175
-      })
-      gsap.to(".header__rings .four", {
-        duration: 2,
-        x: 0,
-        repeat: 0,
-        yoyo: true,
-      });
-
-      //Five
-      gsap.set('.header__rings .five', {
-        x: -200
-      })
-      gsap.to(".header__rings .five", {
-        duration: 2,
-        x: 0,
-        repeat: 0,
-        yoyo: true,
-      });
-    },
-    animateFooter() {
-      //One
-      gsap.set('.footer__rings .one', {
-        x: -100
-      })
-      gsap.to(".footer__rings .one", {
-        duration: 2,
-        x: 0,
-        repeat: 0,
-        yoyo: true,
-        scrollTrigger: '.footer__rings'
-      });
-
-      //Two
-      gsap.set('.footer__rings .two', {
-        x: -125
-      })
-      gsap.to(".footer__rings .two", {
-        duration: 2,
-        x: 0,
-        repeat: 0,
-        yoyo: true,
-        scrollTrigger: '.footer__rings'
-      });
-
-      //Three
-      gsap.set('.footer__rings .three', {
-        x: -150
-      })
-      gsap.to(".footer__rings .three", {
-        duration: 2,
-        x: 0,
-        repeat: 0,
-        yoyo: true,
-        scrollTrigger: '.footer__rings'
-      });
-
-      //Four
-      gsap.set('.footer__rings .four', {
-        x: -175
-      })
-      gsap.to(".footer__rings .four", {
-        duration: 2,
-        x: 0,
-        repeat: 0,
-        yoyo: true,
-        scrollTrigger: '.footer__rings'
-      });
-
-      //Five
-      gsap.set('.footer__rings .five', {
-        x: -200
-      })
-      gsap.to(".footer__rings .five", {
-        duration: 2,
-        x: 0,
-        repeat: 0,
-        yoyo: true,
-        scrollTrigger: '.footer__rings'
+        scrollTrigger: ".footer__rings",
+        stagger: {
+          amount: 0.75,
+          from: 0,
+        },
       });
     },
   },
   mounted() {
-    this.animateSkills();
-    this.animateHeader();
-    this.animateFooter();
-  }
-}
+    this.animateRings();
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -239,7 +100,7 @@ export default {
   left: -150px;
   top: 120px;
   @media only screen and (max-width: $mobile) {
-      left: -350px;
+    left: -350px;
   }
 }
 
