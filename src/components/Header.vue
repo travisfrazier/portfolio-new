@@ -83,7 +83,7 @@ export default {
         "Travis Frazier",
         "a coder",
         "front-end focused",
-        "pretty cool"
+        "pretty cool :)"
       ];
 
       words.forEach((word) => {
@@ -148,7 +148,7 @@ header {
   }
 
   h1 {
-    width: 75%;
+    width: 77%;
     @include font-xl;
     margin-bottom: 34px;
     u {
