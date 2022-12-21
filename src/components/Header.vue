@@ -46,7 +46,8 @@
     <div class="header__main">
       <div class="header__info">
         <h1>
-          Nice to meet you! I'm <u class="animate__text"></u><span class="cursor">_</span>
+          Nice to meet you! I'm <u class="animate__text"></u
+          ><span class="cursor">_</span>
         </h1>
         <p>
           Based in San Diego, I’m a front-end developer passionate about
@@ -64,36 +65,44 @@
 <script>
 export default {
   methods: {
-    typeText() {      
+    typeText() {
 
-    gsap.to('.cursor', {
-      opacity: 0, 
-      duration: .9,
-      ease: "power2.inOut", 
-      repeat: -1,
-    })
+      gsap.to(".cursor", {
+        opacity: 0,
+        duration: 0.9,
+        ease: "power2.inOut",
+        repeat: -1,
+      });
 
-     let tlMaster = gsap.timeline({
-      repeat: 0
-     })
+      let tlMaster = gsap.timeline({
+        delay: 2,
+        repeat: -1
+      });
 
-     let tlText = gsap.timeline({
-      repeat: 0,
-      yoyo: false
-     })
+      const words = [
+        "Travis Frazier",
+        "a coder",
+        "front-end focused",
+        "pretty cool"
+      ];
 
-     tlText.to('.animate__text', {
-      delay: 1.7,
-      duration: 2.5,
-      text: 'Travis Frazier'
-     })
+      words.forEach((word) => {
+        let tlText = gsap.timeline({
+          repeat: 1,
+          yoyo: true,
+        });
+        tlText.to(".animate__text", {
+          duration: 2.5,
+          text: word
+        });
+        tlMaster.add(tlText);
+      });
 
-      tlMaster.add(tlText);
     },
   },
   mounted() {
     this.typeText();
-  }
+  },
 };
 </script>
 
