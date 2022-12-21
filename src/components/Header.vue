@@ -83,7 +83,7 @@ export default {
      })
 
      tlText.to('.animate__text', {
-      delay: 1.5,
+      delay: 1.7,
       duration: 2.5,
       text: 'Travis Frazier'
      })
