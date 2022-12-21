@@ -82,7 +82,7 @@ export default {
       const words = [
         "Travis Frazier",
         "a coder",
-        "front-end focused",
+        "ui",
         "pretty cool :)"
       ];
 
@@ -148,7 +148,7 @@ header {
   }
 
   h1 {
-    width: 77%;
+    width: 75%;
     @include font-xl;
     margin-bottom: 34px;
     u {
