@@ -82,7 +82,7 @@ export default {
       const words = [
         "Travis Frazier",
         "a coder",
-        "ui",
+        "ui focused",
         "pretty cool :)"
       ];
 
