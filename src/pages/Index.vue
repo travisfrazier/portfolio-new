@@ -31,19 +31,6 @@ export default {
   },
   methods: {
     animateRings() {
-      //Header Rings
-      // gsap.set(".header__rings .ring", {
-      //   x: -200,
-      // });
-      // gsap.to(".header__rings .ring", {
-      //   duration: 2,
-      //   x: 0,
-      //   repeat: 0,
-      //   stagger: {
-      //     amount: 0.75,
-      //     from: 0,
-      //   },
-      // });
       // //Skills rings
       gsap.set(".skills__rings .ring", {
         x: 200,
@@ -54,8 +41,7 @@ export default {
         repeat: 0,
         scrollTrigger: ".skills__rings",
         stagger: {
-          amount: 0.75,
-          from: 0,
+          amount: 0.75
         },
       });
       //Footer rings
@@ -68,8 +54,7 @@ export default {
         repeat: 0,
         scrollTrigger: ".footer__rings",
         stagger: {
-          amount: 0.75,
-          from: 0,
+          amount: 0.75
         },
       });
     },

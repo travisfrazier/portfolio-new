@@ -127,6 +127,26 @@ export default {
       ],
     };
   },
+  methods: {
+    animateProjects() {
+      gsap.set('.projects__item', {
+        opacity: 0
+      })
+      
+      gsap.to('.projects__item', {
+        opacity: 1,
+        duration: 2.5,
+        stagger: 1,
+        scrollTrigger: {
+          trigger: '.projects__container', 
+          scrub: 1
+        }
+      })
+    }
+  },
+  mounted() {
+    this.animateProjects();
+  }
 };
 </script>
 
