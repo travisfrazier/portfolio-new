@@ -139,7 +139,7 @@ export default {
         stagger: 1,
         scrollTrigger: {
           trigger: '.projects__container', 
-          scrub: 1
+          scrub: 0.5
         }
       })
     }
